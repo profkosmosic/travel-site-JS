@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Travel Advisor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="author" content="Lazar Petrović">
+	    <meta name="keywords" content="travel, advisor, destination, summer, vacation">
+		<meta name="description" content="Home page of Travel Advisor, a place for affordable vacations!">
+		<link rel="shortcut icon" type="icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	</head>
+	<body>
+		<div id="review" class="modal">
+			<h4 id="heads">Our reviews</h4>
+			<pre id="rev1">Highly recommended! </pre>
+			<pre id="rev2">Best vacation ever! </pre>
+			<pre id="rev3">Staff is very nice! </pre>
+			<label>Leave a review!</label>
+			<div id="stars">
+				<i class="icon fa-star-o" id="star1" onclick="review1()"></i>
+				<i class="icon fa-star-o" id="star2" onclick="review2()"></i>
+				<i class="icon fa-star-o" id="star3" onclick="review3()"></i>
+				<i class="icon fa-star-o" id="star4" onclick="review4()"></i>
+				<i class="icon fa-star-o" id="star5" onclick="review5()"></i>
+			</div>
+			<input type="text" maxlength="20"/>
+			<br/>
+			<a href="#" rel="modal:close" id="modalButton">Save</a>
+			<a href="#" rel="modal:close" id="modalButton">Close</a>
+		</div>
+		<div id="book" class="modal">
+			<h4 id="heads">Booking</h4>
+			<pre>Arrival:<input type="date" id="start" name="trip-start" value="2020-12-08" min="2020-05-22" max="2025-05-22"></pre>
+			<pre>Departure:<input type="date" id="start" name="trip-start" value="2025-12-08" min="2020-05-22" max="2025-05-22"></pre>
+			<a href="#" rel="modal:close" id="modalButton">Save</a>
+			<a href="#" rel="modal:close" id="modalButton">Close</a>
+		</div>
+		<div id="trans" class="modal">
+			<h4 id="heads">Transportation</h4>
+			<p>Please choose your mode of transportation: <select id="mod"></select></p>
+			<p>Please choose the number of passengers:</p>
+			<input type="radio" id="oneP" name="passenger" value="one">
+			<label for="oneP">1</label><br>
+			<input type="radio" id="twoP" name="passenger" value="two">
+			<label for="twoP">2</label><br>
+			<input type="radio" id="threeP" name="passenger" value="three">
+			<label for="threeP">3</label>
+			<br/><br/>
+			<a href="#" rel="modal:close" id="modalButton">Save</a>
+			<a href="#" rel="modal:close" id="modalButton">Close</a>
+		</div>
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">Travel Advisor</a>
+					<nav id="nav"></nav>
+				</div>
+			</header>
+			<a href="#menu" onclick="Burger()" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			<div id="burgerContent">
+				<ul>
+					<li><a href="#one" onclick="Close()">Home</a></li>
+					<li><a href="#two" onclick="Close()">About</a></li>
+					<li><a href="#three" onclick="Close()">Offers</a></li>
+					<li><a href="#footer" onclick="Close()">Contact</a></li>
+				</ul>
+			</div>
+			<section id="banner">
+				<div class="inner">
+					<h1>Welcome! <span>Prepare for<br/> a vacation of your lifetime!</span></h1>
+					<ul class="actions">
+						<li><a href="#one" class="button alt">Get Started</a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="one">
+				<div class="inner">
+					<header>
+						<h2>A time of your life guarantee!</h2>
+					</header>
+					<p>We promise you that you have never been on vacations like these! But you don't have to take our word for it, let this site guide you through the process and also show off the places our happy customers have enjoyed that you could be enjoying too if you give us a chance to win you over!</p>
+					<ul class="actions">
+						<li><a href="#two" class="button alt">Learn More</a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="two">
+				<h1 id="heads">ABOUT US</h1>
+				<div class="inner">
+					<article>
+						<div class="content">
+							<header>
+								<h3>Who we are</h3>
+							</header>
+							<div class="image fit">
+								<img id="slika" src="images/pic1.jpg" alt="office" />
+							</div>
+							<p>We are a traveling agency based in Belgrade, Serbia that will help you pick the best vacation that you've ever been on! We offer the best destinations for very affordable prices.</p>
+						</div>
+					</article>
+					<article class="alt">
+						<div class="content">
+							<header>
+								<h3>What we do</h3>
+							</header>
+							<div class="image fit" id="vacation">
+								<div><img id="slika" src="images/vacation/pic1.jpg" alt="antalya"/></div>
+								<div><img id="slika" src="images/vacation/pic2.jpg" alt="rome"/></div>
+								<div><img id="slika" src="images/vacation/pic3.jpg" alt="istanbul"/></div>
+								<div><img id="slika" src="images/vacation/pic4.jpg" alt="giza"/></div>
+								<div><img id="slika" src="images/vacation/pic5.jpg" alt="athens"/></div>
+							</div>
+							<p>We parse through all information and bookings we can possibly get our hands on so you don't have to and try to offer you the most luxury for the most reasonable price.</p>
+						</div>
+					</article>
+				</div>
+			</section>
+			<section id="three">
+				<h1 id="heads">What we offer</h1>
+				<div class="inner">
+					<article>
+						<div class="content">
+							<span class="icon fa-calendar"></span>
+							<header>
+								<h3>Flexible Dates</h3>
+							</header>
+							<p>Have you ever had problems with your time of arrival or departure not fitting in with your schedule? Worry not! We offer flexible dates that can be changed whenever you feel like it, we go even as far as allowing changes only days before the trip is supposed to take place with no additional charges!</p>
+							<ul class="actions">
+								<li><a href="#book" rel="modal:open" class="button alt">Book your travel!</a></li>
+							</ul>
+						</div>
+					</article>
+					<article>
+						<div class="content">
+							<span class="icon fa-plane"></span>
+							<header>
+								<h3>Transportation</h3>
+							</header>
+							<p>We offer a lot of different kinds of modes of transportation to fit your needs and most importantly, your budget too. From small vans and buses all the way to first class airplanes, you name it, we got it parked outside waiting for you! Buckle up and get ready for the best vacation ever!</p>
+							<ul class="actions">
+								<li><a href="#trans" rel="modal:open" class="button alt">Select your transport!</a></li>
+							</ul>
+						</div>
+					</article>
+					<article>
+					<div class="content">
+							<span class="icon fa-thumbs-up"></span>
+							<header>
+								<h3>User Reviews</h3>
+							</header>
+							<p>Those pesky hotel stars are not always the best way of telling which place will offer the best services, so our site also comes equipped with user ratings and average scores for each country that our users have been to, telling you the best spots and sharing what they learned on their trip!</p>
+							<ul class="actions">
+								<li><a href="#review" rel="modal:open" class="button alt">See our ratings!</a></li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section>
+			<section id="footer">
+				<div class="inner">
+					<header>
+						<h1 id="heads">GET IN TOUCH WITH US</h1>
+					</header>
+					<form method="post" action="#" onsubmit="return false">
+						<div class="field half first">
+							<label id="ime" for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field half">
+							<label id="mejl" for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label id="poruka" for="message">Message</label>
+							<textarea name="message" id="message" rows="6"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="alt" onclick="Klik()" /></li>
+						</ul>
+						<br/>
+						<br id="delete"/>
+						<p id="userMessage"></p>
+					</form>
+					<div class="copyright">
+						<p id="fut">&copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a> Made by: <a href="about.html">LAZAR PETROVIC 125/19</a></p>
+						<p id="fut"><a href="DOKUMENTACIJA.pdf">DOCUMENTATION</a></p>
+					</div>
+				</div>
+			</section>
+		<script type="text/javascript" src="assets/js/carousel.min.js"></script>
+		<script type="text/javascript" src="assets/js/generate.min.js"></script>
+		<script type="text/javascript" src="assets/js/submit.min.js"></script>
+		<script type="text/javascript" src="assets/js/hamburger.min.js"></script>
+	</body>
+</html>
